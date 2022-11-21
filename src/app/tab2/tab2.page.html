@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Criar time
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item>
+    <ion-label position="stacked">Nome</ion-label>
+    <ion-input [(ngModel)]="time.nome" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Escudo</ion-label>
+    <ion-input [(ngModel)]="time.escudo" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Pontos</ion-label>
+    <ion-input [(ngModel)]="time.pontos" type="number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>É meu time?</ion-label>
+    <ion-toggle [(ngModel)]="time.meuTime"></ion-toggle>
+  </ion-item>
+
+  <ion-grid>
+    <ion-button (click)="criar()" expand="block">Criar time</ion-button>
+    <ion-button (click)="voltarParaClassificacao()" expand="block" color="light">Voltar</ion-button>
+  </ion-grid>
+
+</ion-content>
